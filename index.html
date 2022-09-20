@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Overpass">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body{
+      background-color:rgb(20,21,25);
+      height:100vh;
+    }
+    #card-parent{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      height:100%;
+    }
+    #card{
+      background-color:white;
+      width:400px;
+      height:400px;
+      background-image: linear-gradient(to top right, rgb(23,30,38), rgb(30,37,47));
+      border-radius:25px;
+    }
+    #star-img-circle{
+      margin-left:50px; 
+      margin-top:50px; 
+      width:30px;
+      height:30px;
+      border-radius: 50%; 
+      background-color:rgb(39,46,56);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    } 
+    #card-text{
+      font-size:15px;
+      font-weight:700;
+      color:hsl(0, 0%, 100%);
+      font-family: "Overpass";
+      margin:20px 50px;
+    }
+    .points{
+      width:30px;
+      height:30px;
+      border-radius: 50%; 
+      /* display:inline-flex; Not usually in docs but helps if you want to make something inline and also center its content*/
+      justify-content: center;
+      align-items: center;
+      margin:15px;
+      /* vertical-align:top; Useful for spans*/
+      cursor: pointer;
+      border:0;
+      background-color:rgb(39,46,56);
+      color:hsl(217, 12%, 63%);
+      font-family: "Overpass";
+    }
+
+    .points:hover{
+      background-color:blueviolet
+    }
+
+    .points:active{
+      background-color:bisque
+    }
+
+  </style>
+</head>
+<body>
+
+  <div id="card-parent">
+    <div id="card">
+      <div id="star-img-circle">
+        <img src="./images/icon-star.svg">
+      </div>
+      <div id="card-text">
+        <p>How did we do?
+          <br><br>
+          <span id="paragraph-txt" style="font-weight:400; color:hsl(217, 12%, 63%)">Please let us know how we did with your support request. All feedback is appreciated 
+          to help us improve our offering!</span></p>
+      </div>
+      <div id="points-parent" style="margin-top:10px; margin-left:35px">
+        <button class="points" onclick="document.getElementsByClassName('points')[0].style.backgroundColor='orange'">1</button>
+        <button class="points">2</button>
+        <button class="points">3</button>
+        <button class="points">4</button>
+        <button class="points">5</button>
+      </div>
+      
+      
+    </div>
+  </div>
+  <!-- Rating state start -->
+
+  
+
+  1 2 3 4 5
+
+  Submit
+
+  <!-- Rating state end -->
+
+  <!-- Thank you state start -->
+
+  You selected <!-- Add rating here --> out of 5
+
+  Thank you!
+
+  We appreciate you taking the time to give a rating. If you ever need more support, 
+  don’t hesitate to get in touch!
+
+  <!-- Thank you state end -->
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/pujxn" target="_blank">pujxn</a>.
+  </div>
+</body>
+</html>

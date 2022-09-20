@@ -1,0 +1,14 @@
+1. linear-gradient that can be used with the background-image property to specify gradients in diff angles
+2. svgs are xml, pretty cool
+3. align works vertical, jsutify horizontal
+4. adding borders to images will crop them, so to achieve something like you just did for the star, add a div, shape it and insert img in it
+5. spans are inline elements and if they have content inside (text), they wilkl by default vertically align to the parent container's baseline/bottom with their baseline
+6. if they have no baseline, then bottom to baseline. so to maker sure all spans stay in same line, vertical-align:top
+7. spans cant have any top/bottom margins as they are inline
+8. span display inline-flex exists. by default they arent inline, so make sure to change if you want
+9. buttons have border by default
+10. button hover doesnt automatically change cursor pointer, so need to change 'cursor' property
+11. button can be styled like any other inline element, eg: span
+
+
+-- Great work on remembering and implementing stuff learnt in qr code challenge!
