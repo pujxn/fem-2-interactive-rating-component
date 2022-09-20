@@ -59,20 +59,31 @@
       /* vertical-align:top; Useful for spans*/
       cursor: pointer;
       border:0;
-      background-color:rgb(39,46,56);
-      color:hsl(217, 12%, 63%);
+      background-color:rgb(39,46,56);;
       font-family: "Overpass";
     }
 
-    .points:hover{
-      background-color:blueviolet
+    .pointsHovered{
+      background-color:rgb(123,136,152)
     }
 
-    .points:active{
-      background-color:bisque
+    .pointsSelected{
+      background-color:rgb(251,119,21)
     }
 
   </style>
+  <script>
+    function changeColorSelected(ele){
+      var points=document.querySelectorAll('.points')
+      points.forEach(point => point.className="points")
+      document.getElementById(ele.id).className+=" pointsSelected"
+     }
+    function changeColorHovered(ele){
+        var points=document.querySelectorAll('.points')
+        points.forEach(point => {if(!document.getElementById(point.id).className.includes("pointsSelected")) {point.className="points"}})
+        document.getElementById(ele.id).className+=" pointsHovered"
+    }
+  </script>
 </head>
 <body>
 
@@ -88,11 +99,11 @@
           to help us improve our offering!</span></p>
       </div>
       <div id="points-parent" style="margin-top:10px; margin-left:35px">
-        <button class="points" onclick="document.getElementsByClassName('points')[0].style.backgroundColor='orange'">1</button>
-        <button class="points">2</button>
-        <button class="points">3</button>
-        <button class="points">4</button>
-        <button class="points">5</button>
+        <button id="p1" class="points" onclick="changeColorSelected(this)" onmouseover="changeColorHovered(this)" onmouseleave="changeColorHovered(this); document.getElementById(this.id).className.replace('pointsHovered','')">1</button>
+        <button id="p2" class="points" onclick="changeColorSelected(this)" onmouseover="changeColorHovered(this)" onmouseleave="changeColorHovered(this); document.getElementById(this.id).className.replace('pointsHovered','')">2</button>
+        <button id="p3" class="points" onclick="changeColorSelected(this)" onmouseover="changeColorHovered(this)" onmouseleave="changeColorHovered(this); document.getElementById(this.id).className.replace('pointsHovered','')">3</button>
+        <button id="p4" class="points" onclick="changeColorSelected(this)" onmouseover="changeColorHovered(this)" onmouseleave="changeColorHovered(this); document.getElementById(this.id).className.replace('pointsHovered','')">4</button>
+        <button id="p5" class="points" onclick="changeColorSelected(this)" onmouseover="changeColorHovered(this)" onmouseleave="changeColorHovered(this); document.getElementById(this.id).className.replace('pointsHovered','')">5</button>
       </div>
       
       
